@@ -1,0 +1,39 @@
+@use '../globals/spacing.scss'as s;
+
+@mixin container ($width) {
+    margin: auto;
+    padding: s.$default-padding;
+    width: $width;
+}
+
+$dimensions : (
+    'lg' : 100%,
+    'md' : 50%,
+    'sm' : 25%
+);
+
+
+@each $key,
+$value in $dimensions {
+    .container-#{$key} {
+        @include container($value);
+    }
+
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.h-screen{
+    min-height: 100vh;
+}
+

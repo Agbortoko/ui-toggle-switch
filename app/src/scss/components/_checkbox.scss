@@ -1,0 +1,52 @@
+@use '../globals/spacing'as s;
+@use '../globals/colors'as c;
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .slider{
+            background-color: c.$on;
+            border: 1px solid c.$on;
+
+            &::before{
+                transform: translateX(26px);
+            }
+        }
+
+       
+    }
+
+    .slider {
+        position: absolute;
+        inset: 0 0 0 0;
+        cursor: pointer;
+        background-color: c.$off;
+        transition: 350ms ease;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: c.$white;
+            transition: 350ms ease;
+        }
+
+        &.round{
+            border-radius: 34px;
+            &::before{
+                border-radius: 50%;
+            }
+        }
+    }
+}

@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RabbitMaid Toggle</title>
-    <link rel="stylesheet" href="app/dist/css/app.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="app/dist/css/app.min.css" />
+  </head>
+  <body>
 
-    <h1>RabbitMaid Toggle</h1>
-    <p>A paragraph</p>
-    <a href="#">A link</a>
+    <div class="container h-screen flex justify-content-center align-items-center">
 
-    <p>Content</p>
-    <p>PARAGRAPHY</p>
-    
+      <form action="#">
+        <!-- Rectangular switch -->
+        <label class="toggle">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+  
+        <!-- Rounded switch -->
+        <label class="toggle">
+          <input type="checkbox" checked/>
+          <span class="slider round"></span>
+        </label>
+      </form>
+
+    </div>
 
     <script src="app/dist/js/app.min.js"></script>
-</body>
+  </body>
 </html>
